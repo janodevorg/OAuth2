@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>api</key>
+	<string>https://api.tumblr.com</string>
+	<key>authorizationRequestURL</key>
+	<string>https://www.tumblr.com/oauth2/authorize</string>
+	<key>authorizationCodeGrantRequestURL</key>
+	<string>https://api.tumblr.com/v2/oauth2/token</string>
+	<key>callback</key>
+	<string>oauthexample://jano.dev/callback</string>
+	<key>key</key>
+	<string>Cjd6oz2Ff1gloCapqvZMUXRof1bx6p1mrY67Q8kulCTNdYR8C1</string>
+	<key>secret</key>
+	<string>C5F5Q9L40y6jTm5LfMRKTye0RDoOKot6sf43a5Cjl0onSrZijG</string>
+</dict>
+</plist>

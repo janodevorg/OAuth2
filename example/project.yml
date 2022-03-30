@@ -1,0 +1,122 @@
+name: Example
+options:
+  bundleIdPrefix: dev.jano.oauth2.example
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: 15.4
+
+settings:
+    CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
+    DEVELOPMENT_TEAM: PPSF6CNP8Q
+
+packages:
+
+  APIClient:
+    url: git@github.com:janodevorg/APIClient.git
+    branch: main
+
+  AutoLayout:
+    url: git@github.com:janodevorg/AutoLayout.git
+    branch: main
+    
+  CodableHelpers:
+    url: git@github.com:janodevorg/CodableHelpers.git
+    branch: main
+  
+  Coordinator:
+    url: git@github.com:janodevorg/Coordinator.git
+    branch: main
+    
+  CoreDataStack:
+    url: git@github.com:janodevorg/CoreDataStack.git
+    branch: main
+
+  Injection:
+    url: git@github.com:janodevorg/Injection.git
+    branch: main
+
+  Keychain:
+    url: git@github.com:janodevorg/Keychain.git
+    branch: main
+    
+  Kit:
+    url: git@github.com:janodevorg/Kit.git
+    branch: main
+
+  MyTeamwork:
+    path: localpackages/Kit
+
+  MyTumblr:
+    path: localpackages/MyTumblr
+
+  OAuth2:
+    path: ..
+
+  Report:
+    url: git@github.com:janodev/Report.git
+    branch: main
+    
+  TumblrNPF:
+    url: git@github.com:janodevorg/TumblrNPF.git
+    branch: main
+    
+  TumblrNPFPersistence:
+    url: git@github.com:janodevorg/TumblrNPFPersistence.git
+    branch: main
+    
+targets:
+
+  Example:
+    dependencies:
+      - package: APIClient
+      - package: AutoLayout
+      - package: CodableHelpers
+      - package: Coordinator
+      - package: CoreDataStack
+      - package: Injection
+      - package: Keychain
+      - package: Kit
+      - package: MyTeamwork
+      - package: MyTumblr
+      - package: OAuth2
+      - package: Report
+      - package: TumblrNPF
+      - package: TumblrNPFPersistence
+    platform: iOS
+    settings:
+      CODE_SIGN_ENTITLEMENTS: sources/main/application/Example.entitlements
+      CURRENT_PROJECT_VERSION: 1
+      DEVELOPMENT_TEAM: PPSF6CNP8Q
+      INFOPLIST_FILE: targets/main/Info.plist
+      IPHONEOS_DEPLOYMENT_TARGET: 15.0
+      MARKETING_VERSION: 1.0.0
+      PRODUCT_BUNDLE_IDENTIFIER: dev.jano.oauth2.example
+      PRODUCT_NAME: Example
+    scheme:
+      testTargets:
+        - ExampleTests
+    sources:
+      - sources/main
+      - targets/main/Info.plist
+    type: application
+
+  ExampleTests:
+    dependencies:
+      - target: Example
+      - package: Coordinator
+      - package: AutoLayout
+      - package: OAuth2
+    platform: iOS
+    settings:
+      DEVELOPMENT_TEAM: PPSF6CNP8Q
+      INFOPLIST_FILE: targets/tests/Info.plist
+      IPHONEOS_DEPLOYMENT_TARGET: 15.0
+      PRODUCT_BUNDLE_IDENTIFIER: dev.jano.oauth2.example.tests
+      TEST_HOST: $(BUILT_PRODUCTS_DIR)/Example.app/Example
+    sources:
+      - sources/tests
+      - targets/tests/Info.plist
+    type: bundle.unit-test

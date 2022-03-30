@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>api</key>
+	<string>https://testcompany99.teamwork.com/projects/api/v2/people/325618.json?fullprofile=1&amp;page=1&amp;pageSize=50</string>
+	<key>authorizationRequestURL</key>
+	<string>https://www.teamwork.com/launchpad/login</string>
+	<key>authorizationCodeGrantRequestURL</key>
+	<string>https://www.teamwork.com/launchpad/v1/token.json</string>
+	<key>callback</key>
+	<string>oauthexample://callback</string>
+	<key>key</key>
+	<string>b2879a8cef115698c244026d92eef628d4312e11</string>
+	<key>secret</key>
+	<string>abc48606102dfb94f652152dea7ecce0a54ecd1f</string>
+</dict>
+</plist>

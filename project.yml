@@ -1,0 +1,44 @@
+name: oauth2
+
+options:
+  bundleIdPrefix: dev.jano.oauth2
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: 15.0
+
+settings:
+    CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
+
+targets:
+
+  OAuth2:
+    type: framework
+    platform: iOS
+    scheme:
+      testTargets:
+         - OAuth2Tests
+    settings:
+       CURRENT_PROJECT_VERSION: 1
+       INFOPLIST_FILE: targets/main/Info.plist
+       IPHONEOS_DEPLOYMENT_TARGET: 15.0
+       PRODUCT_BUNDLE_IDENTIFIER: dev.jano.oauth2
+       PRODUCT_NAME: OAuth2
+    sources: 
+       - sources/main
+    type: framework
+
+  OAuth2Tests:
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      INFOPLIST_FILE: targets/tests/Info.plist
+      IPHONEOS_DEPLOYMENT_TARGET: 15.0
+      PRODUCT_BUNDLE_IDENTIFIER: dev.jano.oauth2.tests
+      TEST_HOST:
+    sources:
+      - sources/tests
+    dependencies:
+      - target: OAuth2
