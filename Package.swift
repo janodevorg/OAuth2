@@ -17,7 +17,8 @@ let package = Package(
         .package(url: "git@github.com:janodevorg/Dependency.git", branch: "main"),
         .package(url: "git@github.com:janodevorg/Keychain.git", branch: "main"),
         .package(url: "git@github.com:janodevorg/Report.git", branch: "main"),
-        .package(url: "git@github.com:apple/swift-docc-plugin.git", from: "1.0.0")
+        .package(url: "git@github.com:apple/swift-docc-plugin.git", from: "1.0.0"),
+        .package(url: "git@github.com:peripheryapp/periphery", from: "2.8.6")
     ],
     targets: [
         .target(
