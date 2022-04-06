@@ -11,12 +11,12 @@ let package = Package(
         .library(name: "OAuth2Static", type: .static, targets: ["OAuth2"])
     ],
     dependencies: [
-        .package(url: "git@github.com:janodevorg/APIClient.git", branch: "main"),
-        .package(url: "git@github.com:janodevorg/AutoLayout.git", branch: "main"),
-        .package(url: "git@github.com:janodevorg/CodableHelpers.git", branch: "main"),
-        .package(url: "git@github.com:janodevorg/Dependency.git", branch: "main"),
-        .package(url: "git@github.com:janodevorg/Keychain.git", branch: "main"),
-        .package(url: "git@github.com:janodevorg/Report.git", branch: "main"),
+        .package(url: "git@github.com:janodevorg/APIClient.git", from: "1.0.0"),
+        .package(url: "git@github.com:janodevorg/AutoLayout.git", from: "1.0.0"),
+        .package(url: "git@github.com:janodevorg/CodableHelpers.git", from: "1.0.0"),
+        .package(url: "git@github.com:janodevorg/Dependency.git", from: "1.0.0"),
+        .package(url: "git@github.com:janodevorg/Keychain.git", from: "1.0.0"),
+        .package(url: "git@github.com:janodevorg/Report.git", from: "1.0.0"),
         .package(url: "git@github.com:apple/swift-docc-plugin.git", from: "1.0.0"),
         .package(url: "git@github.com:peripheryapp/periphery", from: "2.8.6")
     ],
