@@ -16,35 +16,35 @@ packages:
 
   APIClient:
     url: git@github.com:janodevorg/APIClient.git
-    branch: main
+    from: 1.0.0
 
   AutoLayout:
     url: git@github.com:janodevorg/AutoLayout.git
-    branch: main
+    from: 1.0.0
     
   CodableHelpers:
     url: git@github.com:janodevorg/CodableHelpers.git
-    branch: main
+    from: 1.0.0
   
   Coordinator:
     url: git@github.com:janodevorg/Coordinator.git
-    branch: main
+    from: 1.0.0
     
   CoreDataStack:
     url: git@github.com:janodevorg/CoreDataStack.git
-    branch: main
+    from: 1.0.0
 
   Injection:
     url: git@github.com:janodevorg/Injection.git
-    branch: main
+    from: 1.0.0
 
   Keychain:
     url: git@github.com:janodevorg/Keychain.git
-    branch: main
+    from: 1.0.0
     
   Kit:
     url: git@github.com:janodevorg/Kit.git
-    branch: main
+    from: 1.0.0
 
   MyTeamwork:
     path: localpackages/Kit
@@ -57,15 +57,15 @@ packages:
 
   Report:
     url: git@github.com:janodev/Report.git
-    branch: main
+    from: 1.0.0
     
   TumblrNPF:
     url: git@github.com:janodevorg/TumblrNPF.git
-    branch: main
+    from: 1.0.0
     
   TumblrNPFPersistence:
     url: git@github.com:janodevorg/TumblrNPFPersistence.git
-    branch: main
+    from: 1.0.0
     
 targets:
 

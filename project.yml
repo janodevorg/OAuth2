@@ -12,9 +12,42 @@ options:
 settings:
     CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
 
+packages:
+    
+  APIClient:
+    url: git@github.com:janodevorg/APIClient.git
+    from: 1.0.0
+    
+  AutoLayout:
+    url: git@github.com:janodevorg/AutoLayout.git
+    from: 1.0.0
+
+  CodableHelpers:
+    url: git@github.com:janodevorg/CodableHelpers.git
+    from: 1.0.0
+
+  Dependency:
+    url: git@github.com:janodevorg/Dependency.git
+    from: 1.0.0
+
+  Keychain:
+    url: git@github.com:janodevorg/Keychain.git
+    from: 1.0.0
+    
+  Report:
+    url: git@github.com:janodevorg/Report.git
+    from: 1.0.0
+
 targets:
 
   OAuth2:
+    dependencies:
+      - package: APIClient
+      - package: AutoLayout
+      - package: CodableHelpers
+      - package: Dependency
+      - package: Keychain
+      - package: Report
     type: framework
     platform: iOS
     scheme:
