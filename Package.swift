@@ -4,11 +4,12 @@ import PackageDescription
 let package = Package(
     name: "OAuth2",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
+        .macCatalyst(.v15)
     ],
     products: [
-        .library(name: "OAuth2", type: .dynamic, targets: ["OAuth2"]),
-        .library(name: "OAuth2Static", type: .static, targets: ["OAuth2"])
+        .library(name: "OAuth2", type: .static, targets: ["OAuth2"]),
+        .library(name: "OAuth2Dynamic", type: .dynamic, targets: ["OAuth2"])
     ],
     dependencies: [
         .package(url: "git@github.com:janodevorg/APIClient.git", from: "1.0.0"),
@@ -17,8 +18,7 @@ let package = Package(
         .package(url: "git@github.com:janodevorg/Dependency.git", from: "1.0.0"),
         .package(url: "git@github.com:janodevorg/Keychain.git", from: "1.0.0"),
         .package(url: "git@github.com:janodevorg/Report.git", from: "1.0.0"),
-        .package(url: "git@github.com:apple/swift-docc-plugin.git", from: "1.0.0"),
-        .package(url: "git@github.com:peripheryapp/periphery", from: "2.8.6")
+        .package(url: "git@github.com:apple/swift-docc-plugin.git", from: "1.0.0")
     ],
     targets: [
         .target(
