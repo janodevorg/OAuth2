@@ -25,11 +25,11 @@ let package = Package(
             name: "OAuth2",
             dependencies: [
                 .product(name: "APIClient", package: "APIClient"),
-                .product(name: "AutoLayout", package: "AutoLayout"),
-                .product(name: "CodableHelpers", package: "CodableHelpers"),
-                .product(name: "Dependency", package: "Dependency"),
+                .product(name: "AutoLayoutDynamic", package: "AutoLayout"),
+                .product(name: "CodableHelpersDynamic", package: "CodableHelpers"),
+                .product(name: "DependencyDynamic", package: "Dependency"),
                 .product(name: "Keychain", package: "Keychain"),
-                .product(name: "Report", package: "Report")
+                .product(name: "ReportDynamic", package: "Report")
             ],
             path: "sources/main"
         ),
