@@ -4,12 +4,10 @@ import PackageDescription
 let package = Package(
     name: "OAuth2",
     platforms: [
-        .iOS(.v15),
-        .macCatalyst(.v15)
+        .iOS(.v15)
     ],
     products: [
-        .library(name: "OAuth2", type: .static, targets: ["OAuth2"]),
-        .library(name: "OAuth2Dynamic", type: .dynamic, targets: ["OAuth2"])
+        .library(name: "OAuth2", targets: ["OAuth2"]),
     ],
     dependencies: [
         .package(url: "git@github.com:janodevorg/APIClient.git", from: "1.0.0"),
@@ -25,11 +23,11 @@ let package = Package(
             name: "OAuth2",
             dependencies: [
                 .product(name: "APIClient", package: "APIClient"),
-                .product(name: "AutoLayoutDynamic", package: "AutoLayout"),
-                .product(name: "CodableHelpersDynamic", package: "CodableHelpers"),
-                .product(name: "DependencyDynamic", package: "Dependency"),
+                .product(name: "AutoLayout", package: "AutoLayout"),
+                .product(name: "CodableHelpers", package: "CodableHelpers"),
+                .product(name: "Dependency", package: "Dependency"),
                 .product(name: "Keychain", package: "Keychain"),
-                .product(name: "ReportDynamic", package: "Report")
+                .product(name: "Report", package: "Report")
             ],
             path: "sources/main"
         ),
